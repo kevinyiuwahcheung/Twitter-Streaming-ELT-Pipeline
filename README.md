@@ -3,7 +3,7 @@
 
 This project is mainly focused on ELT pipeline and Kafka cluster. Tools/platforms includeds Twitter Streaming API, Confluent Kafka Cloud, Apache Airflow and Snowflake.
  
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/kevinyiuwahcheung/Twitter-Streaming-ELT-Pipeline/blob/main/datapipeline.png)
 
 
 ## Data Source
