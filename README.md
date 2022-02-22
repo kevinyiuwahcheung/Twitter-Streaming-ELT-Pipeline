@@ -13,12 +13,12 @@ I used Twitter Streaming API as the data source because it allows me to query li
 
 ## Confluent Kafka Cloud
 
-![App Screenshot](https://github.com/kevinyiuwahcheung/Twitter-Streaming-ELT-Pipeline/blob/main/Screen%20Shot%202022-02-22%20at%206.28.21%20PM.png)
+![App Screenshot](https://github.com/kevinyiuwahcheung/Twitter-Streaming-ELT-Pipeline/blob/main/images/kafkaCloud.png)
 
 On Kafka Cloud, I created a topic called “faker” with 5 partitions and 3 replications. The producer publishes tweets to kafka clusters with all acknowledgements. 
 ## Confluent Kafka Snowflake Connector
 
-![App Screenshot](https://github.com/kevinyiuwahcheung/Twitter-Streaming-ELT-Pipeline/blob/main/Screen%20Shot%202022-02-22%20at%206.29.14%20PM.png)
+![App Screenshot](https://github.com/kevinyiuwahcheung/Twitter-Streaming-ELT-Pipeline/blob/main/images/kafkaSnowflakeConnector.png)
 
 I set up a Confluent Kafka Snowflake Sink connector. Cached messages in all partitions will be flushed to the snowflake data warehouse every 15 seconds.
 ## Airflow For JSON Incremental Transformation
@@ -45,4 +45,4 @@ FROM FAKER
 WHERE RECORD_METADATA:CreateTime > (SELECT max(METADATA:CreateTime) FROM FAKER_NORMAL);
 ```
 
-![App Screenshot](https://github.com/kevinyiuwahcheung/Twitter-Streaming-ELT-Pipeline/blob/main/Screen%20Shot%202022-02-22%20at%206.22.39%20PM.png)
+![App Screenshot](https://github.com/kevinyiuwahcheung/Twitter-Streaming-ELT-Pipeline/blob/main/images/finalresult.png)
