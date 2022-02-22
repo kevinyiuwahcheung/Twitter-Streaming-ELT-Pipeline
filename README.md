@@ -23,7 +23,8 @@ On Kafka Cloud, I created a topic called “faker” with 5 partitions and 3 rep
 I set up a Confluent Kafka Snowflake Sink connector. Cached messages in all partitions will be flushed to the snowflake data warehouse every 15 seconds.
 ## Airflow For JSON Incremental Transformation
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/kevinyiuwahcheung/Twitter-Streaming-ELT-Pipeline/blob/main/Screen%20Shot%202022-02-22%20at%206.30.53%20PM.png)
+
 As we can see from the screenshot above, the data being loaded into the snowflake table has 2 columns. Both of them are in JSON format. 
 RECORD_METADATA has fields like “CreateTime”, “offset”, “partition” and “topic”. 
 RECORD_CONTENT has fields like “created_at”, “tweet_id” and so on. 
