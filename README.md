@@ -44,3 +44,5 @@ SELECT
 FROM FAKER
 WHERE RECORD_METADATA:CreateTime > (SELECT max(METADATA:CreateTime) FROM FAKER_NORMAL);
 ```
+
+![App Screenshot](https://github.com/kevinyiuwahcheung/Twitter-Streaming-ELT-Pipeline/blob/main/Screen%20Shot%202022-02-22%20at%206.30.53%20PM.png)
